@@ -1,0 +1,115 @@
+<div class="main-container">
+  <div class="main-text-container">
+    <div class="main-text">
+      <p>
+        <span *ngIf="languageService.isEnglish$ | async">Facilities</span>
+        <span *ngIf="!(languageService.isEnglish$ | async)">Instalaciones</span>
+      </p>
+    </div>
+    <div class="content-container">
+      <p class="description bold">
+        <span *ngIf="languageService.isEnglish$ | async"
+          >What the Shabbat Christian Center Offers:</span
+        >
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >Lo que ofrece el Centro Cristiano Shabat:</span
+        >
+      </p>
+
+      <ul class="description list">
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Master Suite: master bedroom with king-size bed and full bathroom,
+            one bedroom with two full-size beds and full bathroom, living room,
+            dining room and kitchenette.</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Suite Principal: recámara principal con cama king size y baño
+            completo, una recámara con dos camas matrimoniales y baño completo,
+            sala, comedor y cocineta.</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Suite: one bedroom with two queen-size beds and full bathroom,
+            living room, dining room, kitchenette, and balcony.</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Suite: una recámara con dos camas queen-size y baño completo, sala,
+            comedor, cocineta y balcón.</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Jacuzzi and sauna</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Jacuzzi y sauna</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Conference halls</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Salas de conferencias</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async">Meeting rooms</span>
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Salas de reuniones</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Multipurpose hall</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Salón de usos múltiples</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Men’s dormitory with full bathroom</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Dormitorio de hombres con baño completo</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Women’s dormitory with full bathroom</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Dormitorio de mujeres con baño completo</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Common rest areas</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Zonas de descanso comunes</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Green spaces and gardens</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Espacios verdes y jardines</span
+          >
+        </li>
+        <li>
+          <span *ngIf="languageService.isEnglish$ | async"
+            >Outdoor bonfire area</span
+          >
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Zona de fogatas al aire libre</span
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

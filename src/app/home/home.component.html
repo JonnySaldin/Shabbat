@@ -1,0 +1,164 @@
+<div class="main-page-container">
+  <div class="main-text-container">
+    <div class="main-text">
+      <p>
+        <span class="small-words">
+          <span *ngIf="languageService.isEnglish$ | async">Our Mission</span>
+          <span *ngIf="!(languageService.isEnglish$ | async)"
+            >Nuestra Misión</span
+          ></span
+        >
+      </p>
+      <p class="big-words top-big-words">
+        <span *ngIf="languageService.isEnglish$ | async">Renewing Lives,</span>
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >Renovando Vidas,</span
+        >
+      </p>
+      <p class="big-words">
+        <span *ngIf="languageService.isEnglish$ | async"
+          >Strengthening Leaders,</span
+        >
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >Fortaleciendo Líderes,</span
+        >
+      </p>
+      <p class="big-words">
+        <span *ngIf="languageService.isEnglish$ | async"
+          >Building Churches.</span
+        >
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >Construyendo iglesias.</span
+        >
+      </p>
+    </div>
+    <div class="picture-scroll-container">
+      <div class="scroll-track">
+        <img src="assets/images/greenarea.jpg" alt="Photo 1" />
+        <img src="assets/images/multipurpose.jpg" alt="Photo 2" />
+        <img src="assets/images/people.jpg" alt="Photo 3" />
+        <img src="assets/images/Suite1.jpg" alt="Photo 4" />
+        <img src="assets/images/Shabbat1.jpg" alt="Photo 5" />
+        <img src="assets/images/Shabbat2.jpg" alt="Photo 6" />
+
+        <!-- Duplicate for infinite loop effect -->
+        <img src="assets/images/greenarea.jpg" alt="Photo 1" />
+        <img src="assets/images/multipurpose.jpg" alt="Photo 2" />
+        <img src="assets/images/people.jpg" alt="Photo 3" />
+        <img src="assets/images/Suite1.jpg" alt="Photo 4" />
+        <img src="assets/images/Shabbat1.jpg" alt="Photo 5" />
+        <img src="assets/images/Shabbat2.jpg" alt="Photo 6" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-container1">
+  <p class="text1">
+    <span *ngIf="languageService.isEnglish$ | async"
+      >"A place created to strengthen, restore, and equip pastors, leaders, and
+      churches."</span
+    >
+    <span *ngIf="!(languageService.isEnglish$ | async)"
+      >"Un lugar creado para fortalecer, restaurar y equipar pastores, líderes e
+      iglesias."</span
+    >
+  </p>
+</div>
+<div class="home-image-container">
+  <img class="shabbat2-image" src="assets/images/Shabbat2.jpg" alt="" />
+  <img class="gym-image" src="assets/images/multipurpose.jpg" alt="" />
+</div>
+
+<div class="text-container2">
+  <p class="text2">
+    <span *ngIf="languageService.isEnglish$ | async"
+      >"A space where they can find rest, grow physically, emotionally,
+      biblically, and spiritually, and where congregations can also come
+      together for camps and gatherings that build their faith."</span
+    >
+    <span *ngIf="!(languageService.isEnglish$ | async)"
+      >"Un espacio donde pueden encontrar descanso, crecer física, emocional,
+      bíblicamente y espiritualmente, y donde las congregaciones también pueden
+      reunirse para campamentos y reuniones que fortalezcan su fe."</span
+    >
+  </p>
+</div>
+
+<div class="bottom-people-container">
+  <div class="people-description-container">
+    <p class="people-description">
+      <span *ngIf="languageService.isEnglish$ | async"
+        >For 16 years of full-time ministry, God has given Oscar and Karla
+        Chiquitó the privilege of serving more than 140 churches in Guatemala
+        and across Latin America. Along this journey, they have discovered a
+        profound truth: pastors—who pour themselves out daily for their
+        congregations—also need rest, renewal, and ongoing training.</span
+      >
+      <span *ngIf="!(languageService.isEnglish$ | async)"
+        >Durante 16 años de ministerio a tiempo completo, Dios les ha dado a
+        Oscar y Karla Chiquitó el privilegio de servir a más de 140 iglesias en
+        Guatemala y en toda Latinoamérica. En este camino, han descubierto una
+        profunda verdad: los pastores, que se entregan a diario a sus
+        congregaciones, también necesitan descanso, renovación y capacitación
+        continua.</span
+      >
+    </p>
+  </div>
+  <div class="people-picture-container">
+    <img class="people-image" src="assets/images/people.jpg" alt="" />
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-left">
+    <div class="fl-wrapper">
+      <img class="logo-img" src="assets/images/logo.png" alt="" />
+      <p>
+        The Shabbat Christian Center Km. 40 Carretera Interamericana, Lote #14
+        Pachaj Sumpango, Sacatépequez 03004
+      </p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <div class="fr-wrapper">
+      <p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="phone-icon"
+          height="19"
+          width="19"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+          />
+        </svg>
+        +502 4294 7038
+      </p>
+      <p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="mail-icon"
+          height="20"
+          width="20"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+          />
+        </svg>
+
+        ccshabbat&#64;gmail.com
+      </p>
+    </div>
+  </div>
+</div>

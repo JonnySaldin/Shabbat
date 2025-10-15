@@ -1,0 +1,116 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 87vh;
+  background-color: #4657282e;
+  background-size: 600% 600%;
+  animation: forestShift 20s ease infinite;
+  color: #000000;
+  min-height: fit-content;
+  position: absolute;
+  top: 13vh;
+}
+
+.info-container {
+  display: flex;
+  align-items: flex-end;
+  width: fit-content;
+  height: 4.5rem;
+  /* background-color: red; */
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 300;
+  color: #465728;
+}
+
+.check-icn {
+  margin-right: 0.3rem;
+}
+.info {
+  display: flex;
+  align-items: center;
+  background-color: #465728;
+  color: #e4ecd6;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.calendar-container {
+  width: 45%;
+  height: 4rem;
+  /* background-color: red; */
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #465728;
+  margin-top: 1rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: blue; */
+  margin-bottom: 2rem;
+}
+
+.month-scroll-btn {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #46572850;
+  border: none;
+  border-radius: 5rem;
+  color: #465728;
+  transition: all ease 0.3s;
+}
+.month-scroll-btn:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.day-name {
+  font-weight: bold;
+  /* background-color: #f0f0f0; */
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.day {
+  /* padding: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.day:hover {
+  background-color: #46572825;
+}
+
+.day.selected {
+  background-color: #465728;
+  color: white;
+}
+
+.day.empty {
+  visibility: hidden;
+}

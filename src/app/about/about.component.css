@@ -1,0 +1,55 @@
+.about-main-container {
+  width: 100vw;
+  height: 87vh;
+  background-color: #4657282e;
+  background-size: 600% 600%;
+  animation: forestShift 20s ease infinite;
+  color: #f3f3f3;
+  min-height: fit-content;
+  position: absolute;
+  top: 13vh;
+}
+
+.main-text-container {
+  /* display: flex; */
+  width: 100vw;
+  height: fit-content;
+  /* background-color: #86c41a; */
+}
+.main-text {
+  /* background-color: pink; */
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 8.5%;
+  padding: 2rem 0 2rem 0;
+}
+.main-text p {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #465728;
+}
+
+.about-content-container {
+  height: fit-content;
+  width: 83%;
+  margin-left: 8.5%;
+  /* background-color: red; */
+}
+
+.people-img {
+  width: 18rem;
+  float: left;
+  margin: 0 15px 10px 0;
+  border-radius: 8px;
+}
+
+.about-description {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #465728;
+  margin-bottom: 1rem;
+}

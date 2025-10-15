@@ -1,0 +1,95 @@
+<div class="main-container">
+  <div class="info-container">
+    <p class="info">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="check-icn"
+        height="24"
+        width="24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+        />
+      </svg>
+
+      <span *ngIf="languageService.isEnglish$ | async"
+        >Make a reservation: +502 4294 7038</span
+      >
+      <span *ngIf="!(languageService.isEnglish$ | async)">
+        Hacer una reserva: +502 4294 7038</span
+      >
+    </p>
+  </div>
+  <div class="calendar-container">
+    <div class="calendar-header">
+      <button class="month-scroll-btn" (click)="prevMonth()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="size-6"
+          height="16"
+          width="16"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <h2>{{ currentDate | date : "MMMM yyyy" }}</h2>
+      <button class="month-scroll-btn" (click)="nextMonth()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+          height="16"
+          width="16"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="calendar-grid">
+      <div
+        class="day-name"
+        *ngFor="let d of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']"
+      >
+        {{ d }}
+      </div>
+
+      <ng-container *ngFor="let week of weeks">
+        <ng-container *ngFor="let date of week">
+          <div
+            class="day"
+            *ngIf="date; else empty"
+            [class.selected]="isSelected(date)"
+            (click)="toggleDate(date)"
+          >
+            {{ date.getDate() }}
+          </div>
+          <ng-template #empty>
+            <div class="day empty"></div>
+          </ng-template>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="main-text-container">
+    <div class="main-text">
+      <p>Contact Information</p>
+    </div>
+    <div class="content-container">
+      <p class="description">
+        The Shabbat Christian Center Km. 40 Carretera Interamericana, Lote #14
+        Pachaj Sumpango, Sacatépequez 03004
+      </p>
+
+      <p class="description">
+        <span *ngIf="languageService.isEnglish$ | async"
+          >Reservations: +502 4294 7038 ccshabbat&#64;gmail.com</span
+        >
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >Reservas: +502 4294 7038 ccshabbat&#64;gmail.com</span
+        >
+      </p>
+    </div>
+  </div>
+</div>
