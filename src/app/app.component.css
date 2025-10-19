@@ -312,6 +312,10 @@
 }
 
 @media (max-width: 490px) {
+  .user-icon {
+    margin-right: 0.5rem;
+    margin-left: 0.2rem;
+  }
   .nav-wrapper p {
     display: none;
   }
