@@ -21,6 +21,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { environment } from '../environments/environment';
+import { ToastComponent } from './toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { environment } from '../environments/environment';
     FacilitiesComponent,
     ContactComponent,
     ReservationsComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,

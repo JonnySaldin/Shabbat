@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Firestore, doc, setDoc, getDoc } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ReservationsService {
-  constructor(private firestore: Firestore) {}
+  constructor(private afs: AngularFirestore) {}
 
   async saveSelectedDates(dates: string[]) {
-    const docRef = doc(this.firestore, 'reservations', 'calendar');
-    await setDoc(docRef, { dates });
+    const ref = this.afs.collection('reservations').doc('calendar');
+    await ref.set({ dates });
   }
 
   async getSelectedDates(): Promise<string[]> {
-    const docRef = doc(this.firestore, 'reservations', 'calendar');
-    const docSnap = await getDoc(docRef);
-    return docSnap.exists() ? docSnap.data()['dates'] || [] : [];
+    const ref = this.afs.collection('reservations').doc('calendar');
+    const snapshot = await firstValueFrom(ref.get());
+    const data = snapshot.data() as { dates?: string[] } | undefined;
+    return snapshot.exists && data?.dates ? data.dates : [];
   }
 }

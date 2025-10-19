@@ -40,8 +40,8 @@
 }
 
 .calendar-container {
-  width: 45%;
-  height: 4rem;
+  width: fit-content;
+  /* height: 4rem; */
   /* background-color: red; */
   text-align: center;
   font-family: "Lexend Deca", sans-serif;
@@ -113,4 +113,205 @@
 
 .day.empty {
   visibility: hidden;
+}
+
+.day.disabled {
+  pointer-events: none;
+  /* opacity: 0.4; */
+  cursor: not-allowed;
+}
+
+.spinner-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keep your existing disabled and selected classes */
+
+.spinner-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top-color: #3c4c21;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .calendar-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .month-scroll-btn {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
+  .calendar-grid {
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  .day-name {
+    padding: 3px;
+  }
+
+  .day {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 490px) {
+  .calendar-container {
+    /* background-color: red; */
+  }
+
+  .calendar-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .month-scroll-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .calendar-grid {
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .day-name {
+    padding: 2px;
+    font-size: 1rem;
+  }
+
+  .day {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1rem;
+  }
+
+  .info-container {
+    margin-top: 1rem;
+  }
+
+  .info {
+    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 470px) {
+  .calendar-container {
+    /* background-color: red; */
+  }
+
+  .calendar-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .month-scroll-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .calendar-grid {
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .day-name {
+    padding: 2px;
+    font-size: 1rem;
+  }
+
+  .day {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1rem;
+  }
+
+  .info-container {
+    margin-top: 1rem;
+  }
+
+  .info {
+    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 800px) {
+  .calendar-container {
+    /* background-color: red; */
+  }
+
+  .calendar-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .month-scroll-btn {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
+  .calendar-grid {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .day-name {
+    padding: 4px;
+    font-size: 1.3rem;
+  }
+
+  .day {
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 1.1rem;
+  }
+
+  .info-container {
+    margin-top: 1rem;
+  }
+
+  .info {
+    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+    font-size: 12px;
+  }
 }

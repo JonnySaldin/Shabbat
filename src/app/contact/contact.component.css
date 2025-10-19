@@ -46,3 +46,9 @@
   color: #465728;
   margin-bottom: 1rem;
 }
+
+@media (max-height: 680px) {
+  .main-text-container {
+    margin-top: 2rem;
+  }
+}

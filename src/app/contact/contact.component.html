@@ -1,7 +1,14 @@
 <div class="main-container">
   <div class="main-text-container">
     <div class="main-text">
-      <p>Contact Information</p>
+      <p>
+        <span *ngIf="languageService.isEnglish$ | async"
+          >Contact Information</span
+        >
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >Información del contacto</span
+        >
+      </p>
     </div>
     <div class="content-container">
       <p class="description">

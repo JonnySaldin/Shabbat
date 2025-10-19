@@ -1,0 +1,31 @@
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #465728;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0.95;
+  animation: fadeInOut 3s ease forwards;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

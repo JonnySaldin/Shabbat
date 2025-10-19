@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LanguageServiceService } from './services/language-service.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AuthService } from './services/auth.service';
@@ -8,11 +8,14 @@ import { AuthService } from './services/auth.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'shabbat-website';
-  loggedIn = false;
+  isLoggedIn = false;
+  showLoginModal = false;
   loginForm: FormGroup;
   loginError = '';
+
+  showMobileMenu = false;
 
   constructor(
     public languageService: LanguageServiceService,
@@ -25,22 +28,45 @@ export class AppComponent {
     });
   }
 
+  ngOnInit() {
+    // ✅ Track Firebase auth state
+    this.authService.user$.subscribe((user) => {
+      this.isLoggedIn = !!user;
+      if (user) {
+        this.showLoginModal = false; // ensure modal closes on successful login
+      }
+    });
+  }
+
   toggleLanguage() {
     this.languageService.toggleLanguage();
   }
 
   toggleLogin() {
-    this.loggedIn = !this.loggedIn;
+    this.showLoginModal = !this.showLoginModal;
+  }
+
+  toggleMobileMenu() {
+    this.showMobileMenu = !this.showMobileMenu;
   }
 
   async onLogin() {
     const { email, password } = this.loginForm.value;
     try {
       await this.authService.login(email, password);
-      this.loggedIn = false; // close modal
+      this.loginError = '';
+      // modal auto closes via ngOnInit subscription
     } catch (error: any) {
       this.loginError = 'Invalid credentials';
       console.error(error);
+    }
+  }
+
+  async onLogout() {
+    try {
+      await this.authService.logout();
+    } catch (error) {
+      console.error('Logout failed:', error);
     }
   }
 }

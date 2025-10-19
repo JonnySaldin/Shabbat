@@ -1,7 +1,12 @@
 <div class="about-main-container">
   <div class="main-text-container">
     <div class="main-text">
-      <p>About Us</p>
+      <p>
+        <span *ngIf="languageService.isEnglish$ | async">About Us</span>
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >Sobre Nosotros</span
+        >
+      </p>
     </div>
     <div class="about-content-container">
       <img class="people-img" src="assets/images/people.jpg" alt="" />
@@ -76,15 +81,33 @@
         >
       </p>
       <p class="about-description">
-        We praise God for the many ministry partners who have already joined
-        this vision of God. Today, we invite you to join us in making this
-        vision a reality. Together we can build a place that will bring life,
-        hope, and strength to those who give everything for the Gospel. Your
-        prayers and financial support will help turn the Shabbat Christian
-        Center into a reality that will impact generations to come.
+        <span *ngIf="languageService.isEnglish$ | async"
+          >We praise God for the many ministry partners who have already joined
+          this vision of God. Today, we invite you to join us in making this
+          vision a reality. Together we can build a place that will bring life,
+          hope, and strength to those who give everything for the Gospel. Your
+          prayers and financial support will help turn the Shabbat Christian
+          Center into a reality that will impact generations to come.</span
+        >
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >Alabamos a Dios por los muchos socios ministeriales que ya se han
+          unido a esta visión de Dios. Hoy queremos invitarte a ser parte de
+          esta visión de Dios para Su pueblo. Juntos podemos construir este
+          sueño en realidad, un lugar que dará vida y esperanza a quienes día a
+          día entregan todo por el Evangelio. Tu oración y apoyo financiero hará
+          que el Centro Cristiano Shabbat se convierta en una realidad que
+          impactará generaciones.</span
+        >
       </p>
       <p class="about-description">
-        Join the vision—let us be God’s instruments of renewal for His church!
+        <span *ngIf="languageService.isEnglish$ | async"
+          >Join the vision—let us be God’s instruments of renewal for His
+          church!</span
+        >
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >¡Únete a esta visión y seamos instrumentos de renovación en las manos
+          de Dios!</span
+        >
       </p>
     </div>
   </div>

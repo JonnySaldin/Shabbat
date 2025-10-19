@@ -29,13 +29,13 @@
   <div class="calendar-container">
     <div class="calendar-header">
       <button class="month-scroll-btn" (click)="prevMonth()">
+        <!-- left arrow -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="2"
           stroke="currentColor"
-          class="size-6"
           height="16"
           width="16"
         >
@@ -46,15 +46,15 @@
           />
         </svg>
       </button>
-      <h2>{{ currentDate | date : "MMMM yyyy" }}</h2>
+      <h2>{{ monthLabel }}</h2>
       <button class="month-scroll-btn" (click)="nextMonth()">
+        <!-- right arrow -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-6"
           height="16"
           width="16"
         >
@@ -68,10 +68,7 @@
     </div>
 
     <div class="calendar-grid">
-      <div
-        class="day-name"
-        *ngFor="let d of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']"
-      >
+      <div class="day-name" *ngFor="let d of dayNames">
         {{ d }}
       </div>
 
@@ -81,6 +78,7 @@
             class="day"
             *ngIf="date; else empty"
             [class.selected]="isSelected(date)"
+            [class.disabled]="!isLoggedIn"
             (click)="toggleDate(date)"
           >
             {{ date.getDate() }}
@@ -92,4 +90,15 @@
       </ng-container>
     </div>
   </div>
+
+  <!-- Spinner Template -->
+  <ng-template #loadingSpinner>
+    <div class="spinner-overlay">
+      <div class="spinner"></div>
+    </div>
+  </ng-template>
+</div>
+
+<div *ngIf="isLoading" class="spinner-overlay">
+  <div class="spinner"></div>
 </div>
