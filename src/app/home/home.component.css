@@ -190,7 +190,7 @@
   width: 70%;
   height: 90%;
   object-fit: cover;
-  object-position: center; /* center the crop */
+  object-position: center 10%;
   display: block;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

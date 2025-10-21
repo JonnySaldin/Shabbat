@@ -1,7 +1,6 @@
 .about-main-container {
   width: 100vw;
   height: 87vh;
-  background-color: #4657282e;
   background-size: 600% 600%;
   animation: forestShift 20s ease infinite;
   color: #f3f3f3;
