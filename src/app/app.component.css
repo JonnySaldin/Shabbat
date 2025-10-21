@@ -312,6 +312,9 @@
 }
 
 @media (max-width: 490px) {
+  .modal-heading {
+    font-size: 1.3rem;
+  }
   .user-icon {
     margin-right: 0.5rem;
     margin-left: 0.2rem;
