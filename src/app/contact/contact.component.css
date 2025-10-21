@@ -40,11 +40,43 @@
 }
 
 .description {
+  display: flex;
+  align-items: center;
   font-family: "Lexend Deca", sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
   color: #465728;
   margin-bottom: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.social-media {
+  height: 1.4rem;
+  margin-right: 0.5rem;
+  /* padding-bottom: 4rem; */
+}
+
+.link {
+  margin-left: 1rem;
+  white-space: normal; /* allows text to wrap */
+  overflow-wrap: break-word; /* ensures long words break to fit */
+  word-break: break-word;
+}
+
+.contact-img {
+  width: 17rem;
+  border-radius: 15px;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.bottom {
+  padding-bottom: 4rem;
 }
 
 @media (max-height: 680px) {
