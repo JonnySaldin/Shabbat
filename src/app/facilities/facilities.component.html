@@ -6,6 +6,13 @@
         <span *ngIf="!(languageService.isEnglish$ | async)">Facilities</span>
       </p>
     </div>
+
+    <div class="img-cntr">
+      <img class="facilities-img" src="assets/images/Suite1.png" alt="Suite1" />
+      <img class="facilities-img" src="assets/images/Suite2.png" alt="Suite2" />
+      <img class="facilities-img" src="assets/images/salon.png" alt="Salon" />
+      <img class="facilities-img" src="assets/images/sala.png" alt="Sala" />
+    </div>
     <div class="content-container">
       <p class="description bold">
         <span *ngIf="languageService.isEnglish$ | async"

@@ -43,7 +43,8 @@
   font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-size: 5rem;
-  color: #465728;
+  /* color: #465728; */
+  color: #66797e;
   /* color: white; */
   padding-left: 0.5rem;
   line-height: 6rem;
@@ -91,8 +92,8 @@
 .scroll-track img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin: 10px 0;
+  /* border-radius: 10px; */
+  margin: 0px 0;
   object-fit: cover;
 }
 
@@ -122,7 +123,7 @@
   font-family: "Lexend Deca", sans-serif;
   font-weight: 300;
   font-size: 2rem;
-  color: #465728;
+  color: #66797e;
 }
 
 .home-image-container {
@@ -168,7 +169,7 @@
   width: 100vw;
   height: 35rem;
   text-align: center;
-  background-color: #465728dc;
+  background-color: #66797e;
 }
 
 .bottom-people-container {
@@ -197,7 +198,7 @@
   font-family: "Lexend Deca", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
-  color: #465728;
+  color: #476067;
 }
 
 .people-picture-container {
@@ -246,7 +247,7 @@
   font-family: "Lexend Deca", sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  color: #465728;
+  color: #476067;
   margin: 0 0 5% 0;
 }
 
@@ -280,7 +281,7 @@
   font-family: "Lexend Deca", sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  color: #465728;
+  color: #476067;
   margin: 0 3rem 0.4rem 0;
 }
 
@@ -352,10 +353,15 @@
     background-position: center 110%;
   }
 
+  .home-image-container {
+    height: 34rem;
+  }
+
   .half-moon-bg,
   .main-text-container,
   .main-text,
   .picture-scroll-container,
+  .main-page-container,
   .big-words,
   .scroll-track {
     display: none;
@@ -448,6 +454,8 @@
   .text1 {
     font-size: 1.4rem;
     padding: 1rem;
+    margin-bottom: -6rem;
+    /* font-weight: bold; */
   }
   .text2 {
     font-size: 1.7rem;
