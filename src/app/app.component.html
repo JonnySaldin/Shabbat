@@ -1,6 +1,11 @@
 <div class="header-container">
   <div class="header-left">
-    <img routerLink="" class="logo-img" src="assets/images/logo.png" alt="" />
+    <img
+      routerLink=""
+      class="logo-img"
+      src="assets/images/newShabbatLogo.png"
+      alt=""
+    />
     <div class="nav-wrapper">
       <p routerLink="">
         <svg
@@ -21,10 +26,10 @@
         </svg>
 
         <span *ngIf="languageService.isEnglish$ | async" class="nav-word"
-          >Home</span
+          >Inicio</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)" class="nav-word"
-          >Hogar</span
+          >Home</span
         >
       </p>
       <p routerLink="/about">
@@ -46,10 +51,10 @@
         </svg>
 
         <span *ngIf="languageService.isEnglish$ | async" class="nav-word"
-          >About Us</span
+          >Sobre Nosotros</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)" class="nav-word"
-          >Sobre Nosotros</span
+          >About Us</span
         >
       </p>
       <p routerLink="/facilities">
@@ -71,10 +76,10 @@
         </svg>
 
         <span *ngIf="languageService.isEnglish$ | async" class="nav-word"
-          >Facilities</span
+          >Instalaciones</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)" class="nav-word"
-          >Instalaciones</span
+          >Facilities</span
         >
       </p>
       <p class="contact-tab" routerLink="/contact">
@@ -96,10 +101,10 @@
         </svg>
 
         <span *ngIf="languageService.isEnglish$ | async" class="nav-word"
-          >Contact</span
+          >Contacto</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)" class="nav-word"
-          >Contacto</span
+          >Contact</span
         >
       </p>
     </div>
@@ -128,7 +133,7 @@
           />
         </svg>
 
-        <span class="nav-word">Cambiar al español</span>
+        <span class="nav-word">Switch to English</span>
       </p>
       <p
         class="language-toggle"
@@ -152,7 +157,7 @@
           />
         </svg>
 
-        <span class="nav-word">Switch to English</span>
+        <span class="nav-word">Cambiar al español</span>
       </p>
     </div>
     <div class="nw-right">
@@ -175,10 +180,10 @@
           />
         </svg>
         <span *ngIf="languageService.isEnglish$ | async" class="nav-word"
-          >Login</span
+          >Acceso</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)" class="nav-word"
-          >Acceso</span
+          >Login</span
         >
       </p>
 
@@ -202,10 +207,10 @@
         </svg>
 
         <span *ngIf="languageService.isEnglish$ | async" class="nav-word"
-          >Login</span
+          >Acceso</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)" class="nav-word"
-          >Acceso</span
+          >Login</span
         >
       </p>
 
@@ -228,10 +233,10 @@
           />
         </svg>
         <span *ngIf="languageService.isEnglish$ | async" class="nav-word"
-          >Logout</span
+          >Cerrar sesión</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)" class="nav-word"
-          >Cerrar sesión</span
+          >Logout</span
         >
       </p>
 
@@ -254,10 +259,10 @@
         </svg>
 
         <span *ngIf="languageService.isEnglish$ | async" class="nav-word"
-          >Reservations</span
+          >Reservas</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)" class="nav-word"
-          >Reservas</span
+          >Reservations</span
         >
       </p>
     </div>
@@ -269,10 +274,10 @@
     <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
       <div class="modal-heading">
         <p>
-          <span *ngIf="languageService.isEnglish$ | async">Admin Login</span>
-          <span *ngIf="!(languageService.isEnglish$ | async)"
+          <span *ngIf="languageService.isEnglish$ | async"
             >Inicio de sesión de administrador</span
           >
+          <span *ngIf="!(languageService.isEnglish$ | async)">Admin Login</span>
         </p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -307,10 +312,13 @@
         />
       </div>
       <button class="login-btn" type="submit">
-        <span *ngIf="languageService.isEnglish$ | async">Login</span>
-        <span *ngIf="!(languageService.isEnglish$ | async)">Acceso</span>
+        <span *ngIf="languageService.isEnglish$ | async">Acceso</span>
+        <span *ngIf="!(languageService.isEnglish$ | async)">Login</span>
       </button>
-      <p *ngIf="loginError" class="error">{{ loginError }}</p>
+      <p *ngIf="loginError" class="error">
+        <span *ngIf="languageService.isEnglish$ | async">Acceso inválido</span>
+        <span *ngIf="!(languageService.isEnglish$ | async)">Login invalid</span>
+      </p>
     </form>
   </div>
 </div>
@@ -339,8 +347,8 @@
         />
       </svg>
 
-      <span *ngIf="languageService.isEnglish$ | async">Home</span>
-      <span *ngIf="!(languageService.isEnglish$ | async)">Hogar</span>
+      <span *ngIf="languageService.isEnglish$ | async">Inicio</span>
+      <span *ngIf="!(languageService.isEnglish$ | async)">Home</span>
     </p>
     <p routerLink="/about" (click)="toggleMobileMenu()">
       <svg
@@ -360,8 +368,8 @@
         />
       </svg>
 
-      <span *ngIf="languageService.isEnglish$ | async">About Us</span>
-      <span *ngIf="!(languageService.isEnglish$ | async)">Sobre Nosotros</span>
+      <span *ngIf="languageService.isEnglish$ | async">Sobre Nosotros</span>
+      <span *ngIf="!(languageService.isEnglish$ | async)">About Us</span>
     </p>
     <p routerLink="/facilities" (click)="toggleMobileMenu()">
       <svg
@@ -381,8 +389,8 @@
         />
       </svg>
 
-      <span *ngIf="languageService.isEnglish$ | async">Facilities</span>
-      <span *ngIf="!(languageService.isEnglish$ | async)">Instalaciones</span>
+      <span *ngIf="languageService.isEnglish$ | async">Instalaciones</span>
+      <span *ngIf="!(languageService.isEnglish$ | async)">Facilities</span>
     </p>
     <p class="contact-tab" routerLink="/contact" (click)="toggleMobileMenu()">
       <svg
@@ -402,8 +410,8 @@
         />
       </svg>
 
-      <span *ngIf="languageService.isEnglish$ | async">Contact</span>
-      <span *ngIf="!(languageService.isEnglish$ | async)">Contacto</span>
+      <span *ngIf="languageService.isEnglish$ | async">Contacto</span>
+      <span *ngIf="!(languageService.isEnglish$ | async)">Contact</span>
     </p>
 
     <p
@@ -428,8 +436,8 @@
           d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
         />
       </svg>
-      <span *ngIf="languageService.isEnglish$ | async">Login</span>
-      <span *ngIf="!(languageService.isEnglish$ | async)">Acceso</span>
+      <span *ngIf="languageService.isEnglish$ | async">Acceso</span>
+      <span *ngIf="!(languageService.isEnglish$ | async)">Login</span>
     </p>
   </div>
 </div>

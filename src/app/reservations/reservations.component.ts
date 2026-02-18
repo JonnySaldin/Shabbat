@@ -51,8 +51,8 @@ export class ReservationsComponent {
     this.langSub = this.languageService.isEnglish$.subscribe((isEnglish) => {
       // day names
       this.dayNames = isEnglish
-        ? ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-        : ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+        ? ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb']
+        : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
       // update month label right away
       this.updateMonthLabel();
@@ -71,7 +71,7 @@ export class ReservationsComponent {
 
   // --- small helper to choose locale
   private getLocale(): string {
-    return this.languageService.isEnglish$.value ? 'en-US' : 'es-ES';
+    return this.languageService.isEnglish$.value ? 'es-ES' : 'en-US';
   }
 
   // --- update the monthLabel using the current date + current locale

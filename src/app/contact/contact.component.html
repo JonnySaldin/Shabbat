@@ -3,10 +3,10 @@
     <div class="main-text">
       <p>
         <span *ngIf="languageService.isEnglish$ | async"
-          >Contact Information</span
+          >Información del contacto</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)"
-          >Información del contacto</span
+          >Contact Information</span
         >
       </p>
     </div>
@@ -18,23 +18,22 @@
       <p class="description">Sumpango, Sacatépequez 03004</p>
       <p class="description">Guatemala</p>
       <p class="description">
-        Location:
+        <span *ngIf="languageService.isEnglish$ | async">Ubicación</span>
+        <span *ngIf="!(languageService.isEnglish$ | async)">Location</span>
         <a class="link" href="https://maps.app.goo.gl/fHFkja9vFtziykmH9?g_st=iw"
           >https://maps.app.goo.gl/fHFkja9vFtziykmH9?g_st=iw</a
         >
       </p>
 
       <p class="description bold">
-        <span *ngIf="languageService.isEnglish$ | async">Reservations:</span>
-        <span *ngIf="!(languageService.isEnglish$ | async)">Reservas:</span>
+        <span *ngIf="languageService.isEnglish$ | async">Reservas:</span>
+        <span *ngIf="!(languageService.isEnglish$ | async)">Reservations:</span>
       </p>
       <p class="description">+502 4242 4318</p>
       <p class="description">ccshabbat&#64;gmail.com</p>
       <p class="description bold">
-        <span *ngIf="languageService.isEnglish$ | async">Social Media:</span>
-        <span *ngIf="!(languageService.isEnglish$ | async)"
-          >Redes Sociales:</span
-        >
+        <span *ngIf="languageService.isEnglish$ | async">Redes Sociales:</span>
+        <span *ngIf="!(languageService.isEnglish$ | async)">Social Media:</span>
       </p>
       <p class="description bottom">
         <svg

@@ -10,25 +10,25 @@
         >
       </p> -->
       <p class="big-words top-big-words">
-        <span *ngIf="languageService.isEnglish$ | async">Renewing Lives,</span>
+        <span *ngIf="languageService.isEnglish$ | async">Renovando Vidas,</span>
         <span *ngIf="!(languageService.isEnglish$ | async)"
-          >Renovando Vidas,</span
+          >Renewing Lives,</span
         >
       </p>
       <p class="big-words">
         <span *ngIf="languageService.isEnglish$ | async"
+          >Desarrollando Líderes,</span
+        >
+        <span *ngIf="!(languageService.isEnglish$ | async)"
           >Strengthening Leaders,</span
         >
-        <span *ngIf="!(languageService.isEnglish$ | async)"
-          >Fortaleciendo Líderes,</span
-        >
       </p>
       <p class="big-words">
         <span *ngIf="languageService.isEnglish$ | async"
-          >Building Churches.</span
+          >Edificando Iglesias.</span
         >
         <span *ngIf="!(languageService.isEnglish$ | async)"
-          >Construyendo iglesias.</span
+          >Building Churches.</span
         >
       </p>
     </div>
@@ -51,16 +51,29 @@
       </div>
     </div>
   </div>
+
+  <div class="half-moon-bg">
+    <svg
+      viewBox="0 0 1440 320"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="#ffffff"
+        d="M0,160 C420,80 1020,240 1440,160 L1440,320 L0,320 Z"
+      />
+    </svg>
+  </div>
 </div>
 <div class="text-container1">
   <p class="text1">
     <span *ngIf="languageService.isEnglish$ | async"
-      >"A place created to strengthen, restore, and equip pastors, leaders, and
-      churches."</span
-    >
-    <span *ngIf="!(languageService.isEnglish$ | async)"
       >"Un lugar creado para fortalecer, restaurar y equipar pastores, líderes e
       iglesias."</span
+    >
+    <span *ngIf="!(languageService.isEnglish$ | async)"
+      >"A place created to strengthen, restore, and equip pastors, leaders, and
+      churches."</span
     >
   </p>
 </div>
@@ -72,14 +85,14 @@
 <div class="text-container2">
   <p class="text2">
     <span *ngIf="languageService.isEnglish$ | async"
-      >"A space where they can find rest, grow physically, emotionally,
-      biblically, and spiritually, and where congregations can also come
-      together for camps and gatherings that build their faith."</span
-    >
-    <span *ngIf="!(languageService.isEnglish$ | async)"
       >"Un espacio donde pueden encontrar descanso, crecer física, emocional,
       bíblicamente y espiritualmente, y donde las congregaciones también pueden
       reunirse para campamentos y reuniones que fortalezcan su fe."</span
+    >
+    <span *ngIf="!(languageService.isEnglish$ | async)"
+      >"A space where they can find rest, grow physically, emotionally,
+      biblically, and spiritually, and where congregations can also come
+      together for camps and gatherings that build their faith."</span
     >
   </p>
 </div>
@@ -88,14 +101,6 @@
   <div class="people-description-container">
     <p class="people-description">
       <span *ngIf="languageService.isEnglish$ | async"
-        >For 16 years of full-time ministry, God has given Oscar and Karla
-        Chiquitó, and the Impacting Guatemala Network - IGN - team, the
-        privilege of serving more than 140 churches in Guatemala and across
-        Latin America. Along this journey, they have discovered a profound
-        truth: pastors—who pour themselves out daily for their
-        congregations—also need rest, renewal, and ongoing training.</span
-      >
-      <span *ngIf="!(languageService.isEnglish$ | async)"
         >Durante 16 años de ministerio a tiempo completo, Dios les ha dado a
         Oscar y Karla Chiquitó, y al equipo de la Red Impactando Guatemala
         (IGN), el privilegio de servir a más de 140 iglesias en Guatemala y en
@@ -103,6 +108,14 @@
         profunda verdad: los pastores, que se entregan diariamente a sus
         congregaciones, también necesitan descanso, renovación y capacitación
         continua.</span
+      >
+      <span *ngIf="!(languageService.isEnglish$ | async)"
+        >For 16 years of full-time ministry, God has given Oscar and Karla
+        Chiquitó, and the Impacting Guatemala Network - IGN - team, the
+        privilege of serving more than 140 churches in Guatemala and across
+        Latin America. Along this journey, they have discovered a profound
+        truth: pastors—who pour themselves out daily for their
+        congregations—also need rest, renewal, and ongoing training.</span
       >
     </p>
   </div>
@@ -113,7 +126,11 @@
 <div class="footer">
   <div class="footer-left">
     <div class="fl-wrapper">
-      <img class="footer-logo-img" src="assets/images/logo.png" alt="" />
+      <img
+        class="footer-logo-img"
+        src="assets/images/newShabbatLogo.png"
+        alt=""
+      />
       <p>
         The Shabbat Christian Center<br />
         Km. 40 Carretera Interamericana, Lote #14<br />Sumpango, Sacatépequez
