@@ -1,0 +1,34 @@
+<div class="about-main-container">
+  <div class="main-text-container">
+    <div class="main-text">
+      <p>
+        <span *ngIf="languageService.isEnglish$ | async">Donar</span>
+        <span *ngIf="!(languageService.isEnglish$ | async)">Donate</span>
+      </p>
+    </div>
+    <div class="about-content-container">
+      <p class="donate-description">
+        <span *ngIf="languageService.isEnglish$ | async"
+          >Nos honraría mucho que decidiera apoyar al Centro Cristiano Shabat.
+          El enlace a continuación le llevará a nuestra agencia de misiones,
+          donde puede donar de forma segura. Por favor, incluya el nombre de
+          Oscar Chiquito en su donación.
+        </span>
+        <span *ngIf="!(languageService.isEnglish$ | async)"
+          >We would be honored by your descision to support the Shabbat
+          Christian Center! The link below will take you to our missions agencey
+          where you can donate securely. Please enter the name Oscar Chiquito in
+          your donation.
+        </span>
+      </p>
+    </div>
+    <p class="donate-description">
+      <a
+        class="link"
+        href="https://cten.denarionline.com/Donate/?missionary=CHIQOSC"
+        target="_blank"
+        >https://cten.denarionline.com/Donate/?missionary=CHIQOSC</a
+      >
+    </p>
+  </div>
+</div>
