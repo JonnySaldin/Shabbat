@@ -7,7 +7,8 @@
   height: 6.5rem;
   z-index: 1001;
   background-color: #fcfbfe;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -198,7 +199,8 @@
   height: fit-content;
   z-index: 1002;
   border-radius: 15px;
-  box-shadow: rgba(50, 50, 93, 0.219) 0px 50px 100px -20px,
+  box-shadow:
+    rgba(50, 50, 93, 0.219) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.12) 0px 30px 60px -30px;
 }
 
@@ -271,6 +273,12 @@
   font-weight: bold;
 }
 
+@media (max-width: 1380px) {
+  .nav-wrapper p {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 1200px) {
   .reservations-btn {
     padding: 0.4rem 0.8rem 0.4rem 0.8rem;
@@ -278,8 +286,7 @@
   }
 
   .header-left p {
-    padding: 0.9rem 1rem 0.9rem 1rem;
-    font-size: 14px;
+    padding: 0.9rem 0.6rem 0.9rem 0.6rem;
   }
 
   .login-tab {
@@ -301,7 +308,7 @@
     display: none;
   }
   .nav-wrapper p {
-    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    padding: 0.2rem 4% 0.2rem 4%;
     margin: 0;
   }
   .user-icon {
@@ -312,11 +319,25 @@
     margin: 0;
   }
 
+  .nav-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* background-color: red; */
+    margin-right: -7rem;
+  }
+
   .logo-img {
     height: 75%;
     border-radius: 25px;
-    margin-right: -0.3rem;
+    margin-right: 1rem;
     margin-left: -1rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .nav-wrapper {
+    margin-right: 0;
   }
 }
 
